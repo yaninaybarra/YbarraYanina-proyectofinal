@@ -1,0 +1,31 @@
+@use '_commons' as c;
+
+
+//COMIENZO FOOTER-ANIDACIÓN//
+footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+       
+
+    .horarios{
+        background-color: map-get(c.$colores,"background-horarios");
+        padding:15px 15px;
+    }
+        a{
+            color:map-get(c.$colores,"texto-horarios");
+        }
+
+        a:hover{
+            color: map-get(c.$colores,"hover-horarios");
+        }
+    .copyright{
+        background-color: map-get(c.$colores,"background-copyright");
+        padding: 3px 3px;
+    }
+
+    .copyright, .horarios{
+        font-size: 12px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,107 @@
+@use '_commons' as c;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cover{
+    background-size: cover;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    margin-top: -95px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    
+}
+span{
+    color: #fff;
+    text-shadow: map-get(c.$colores,"box-shadow");
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.login{
+    color:map-get(c.$colores,"text");
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.input-field .input{
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background: rgba(12, 11, 11, 0.336);
+    outline: none;
+}
+#i-i{
+    position: relative;
+    top: -33px;
+    left: 17px;
+    color: #fff;
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    color: black;
+    background: rgba(236, 234, 234, 0.7);
+    cursor: pointer;
+    transition: .3s ;
+}
+.submit:hover{
+    box-shadow: 1px 5px 7px 3px rgba(0, 0, 0, 0.2);
+    background-color: map-get(c.$colores,"subtitulos");
+}
+.two-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgb(37, 37, 37);
+    font-size: medium;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+        .one{
+            display: flex;
+        }
+        .one label{
+            cursor: pointer;
+            &:hover{
+                color:map-get(c.$colores,"hover-social");
+            }
+        }
+        .two a{
+            text-decoration: none;
+            color: rgb(37, 37, 37);
+            margin-left:25px;
+            &:hover{
+                color:map-get(c.$colores,"hover-social");
+            }
+        }
+}
+
+
+

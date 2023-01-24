@@ -1,0 +1,154 @@
+@use '_commons' as c;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Tahoma, sans-serif;
+}
+body{
+   
+    background-image: url(../img/img-inicio.png);
+    background-size:100% auto;
+    background-repeat: no-repeat;
+   background-attachment: fixed;  
+}
+
+//INICIO DE CONTENIDO -movil first//
+#inicio{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+        h2{
+            font-style: italic;
+            text-transform: capitalize;
+            text-shadow: map-get(c.$colores,"text-shadow");
+            padding-top: 15px;
+            font-size: 13px;
+        }
+        p{
+            font-size:13px;
+            padding-left:80px;
+            padding-right:80px;
+            font-style: italic;
+            margin-top:-10px;  
+            text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);  
+        }
+        .main-head-partition{
+            border-bottom: 2px solid #adadad;
+            position: absolute;
+            left:80px;
+            right:100px;
+            top:115px;
+        }
+}
+
+/*responsive inicio de contenido tablet y escritorio*/
+@media (min-width:768px){
+    #inicio{
+        h2{
+            font-size:25px;
+            
+        }
+        p{
+            font-size:18px;
+            padding-left:180px;
+            padding-right:180px;
+        }
+        .main-head-partition{
+           margin-top: 65px;
+        }
+        
+    }
+}
+//subtitulo//
+.tratamientos{
+    font-size: 13px;
+    margin-top: 37px;
+    text-transform: capitalize;  
+    color: map-get(c.$colores,"subtitulos");
+    text-align: center;
+    text-shadow: 5px 5px 5px rgb(0 0 0 / 30%);
+}
+@media (min-width:554px){
+body{
+    background-size: cover;
+}
+#inicio{
+    h2{
+        padding-top:50px;
+        font-size: 25px;
+    }
+    p{
+        font-size:18px;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        padding-bottom: 25px;
+    }
+    .main-head-partition{
+        margin-top:70px;
+     }
+}
+}
+//INICIO DE SERVICIOS-IMG//
+#servicios-img{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    cursor:pointer;
+    justify-content: center;
+    margin-top:20px;
+    margin-bottom:100px;
+    gap:18px;
+    grid-template-columns: repeat(1, 1fr);
+
+        .img-1, .img-2, .img-3{
+            grid-column: span 1; /* 1 columna en pantallas pequeñas */
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            padding-top: 10px;
+            }
+            .img-1:hover, .img-2:hover, .img-3:hover{
+            transform: scale(1.2);
+            }
+    }
+    
+/*responsive de servicios-img, tablet y escritorio*/
+@media (min-width:768px){
+body{
+    background-size: cover;
+    }
+//subtitulo//
+.tratamientos{
+    font-size: 16px;
+    margin-top: 35px;
+  
+}
+#servicios-img{
+    display: grid;
+    gap:1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right:auto;
+    margin-left: auto;
+    margin-top:10px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+}
+.img-1{
+    grid-column: span1;
+}
+
+.img-2{
+    grid-column: span2;
+}
+.img-3{
+    grid-column: span3;
+}
+.img-1-text,.img-2-text,.img-3-text {
+    text-align: center;
+}
+
+}
+

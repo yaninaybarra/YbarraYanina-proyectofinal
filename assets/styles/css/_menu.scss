@@ -1,0 +1,156 @@
+@use '_commons' as c;
+
+//COMIENZO ENCABEZADO-MOVIL FIRST//
+header{
+    background-color:map-get(c.$colores,"header");
+    box-shadow:map-get(c.$colores,"box-shadow");
+    height: 80px;
+   
+ }
+ //LOGO//
+ .logo img{
+     width:39vh;
+     position: absolute;
+     left:0px;
+ }
+ //MENU HAMBURGUESA//
+ .checkbtn{
+     color:map-get(c.$colores,"menu-hamburguesa");
+     font-size: 28px;
+     float:right;
+     line-height:80px;
+     margin-right:40px;
+     cursor: pointer;
+ }
+ 
+ //MENU HAMBURGUESA-MENUNAV-REDES SOCIALES OCULTO PARA MOBILE FIRST//
+ #check{
+     display: none;
+ }
+ .nav-menu{
+     display: none;
+ }
+ .social-menu{
+     display: none;
+ }
+ //FIN ENCABEZADO//
+ 
+ //TABLET MENU//
+ @media only screen and (min-width: 768px){
+ //MENU HAMBURGUESA//
+ .checkbtn{
+     display:none;
+ }
+ //LOGO//
+ .logo img{
+     width: 220px;
+     margin-top:-1px;
+     margin-left: -15px;
+ }
+ //MENU-ANIDACIÓN//
+ .nav-menu{
+     display: block;
+     display: flex;
+     justify-content: center;
+     list-style: none;
+     padding-top:36px;
+     padding-left:90px;
+     font-weight: bold;
+ .nav-menu-item{
+     font-size:18px;
+ }
+ .nav-menu-link{
+     text-decoration: none;
+     color: map-get(c.$colores,"texto-menu");
+ }
+ .nav-menu-link:hover{
+     color: map-get(c.$colores,"hover-menu");
+     border-bottom:2px solid map-get(c.$colores,"hover-menu"); 
+     transition: 0.2s;
+ }
+ .barra{
+     font-size: 13px;
+     padding-right: 3px;
+     padding-left: 3px;
+     color: map-get(c.$colores,"texto-menu");
+     margin:0px 4px;
+ 
+ }}
+ /*TABLET-REDES SOCIALES*/
+ @media only screen and (min-width: 768px){
+     .social-menu{
+         display: flex;
+         justify-content: end;
+         margin-top: -25px;
+         padding-right:18px;
+         font-size:23px;
+        
+         i{
+             color:map-get(c.$colores,"social-menu");
+             box-shadow: 0 0 15px 0 map-get(c.$colores,"social-menu");
+             &:hover{
+                 color:map-get(c.$colores,"hover-social");
+             }
+         }
+     }
+ }}
+ 
+ /*DESKTOP-MENU*/
+ @media only screen and (min-width:1280px){
+ //MENU HAMBURGUESA//
+ .checkbtn{
+     display:none;
+ }
+ //LOGO//
+ .logo img{
+     width: 290px;
+     margin-top:-15px;
+ }
+ //MENU-ANIDACIÓN//
+ .nav-menu{
+         display: block;
+         display: flex;
+         justify-content: center;
+         list-style: none;
+         padding-top:36px;
+         font-weight: bold;
+     .nav-menu-item{
+         font-size:20px;
+     }
+     .nav-menu-link{
+         text-decoration: none;
+         color: map-get(c.$colores,"texto-menu");
+     }
+     .nav-menu-link:hover{
+         color: map-get(c.$colores,"hover-menu");
+         border-bottom:2px solid map-get(c.$colores,"hover-menu"); 
+         transition: 0.2s;
+     }
+     .barra{
+         font-size: 18px;
+         padding-right: 5px;
+         padding-left: 5px;
+         color: map-get(c.$colores,"texto-menu");
+         margin:0px 10px;
+ 
+     }
+ }
+ //REDES SOCIALES-ANIDACIÓN//
+     .social-menu{
+         display: block;
+         font-size: 26px;
+         margin-top: -29px;
+         padding-right:18px;
+         justify-content: end;
+         display: flex;
+
+     i{
+         color:map-get(c.$colores,"social-menu");
+         box-shadow: 0 0 15px 0 map-get(c.$colores,"social-menu");
+         
+     }
+     i:hover{
+         color:map-get(c.$colores,"hover-social");
+     }
+ 
+ }}

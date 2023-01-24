@@ -1,0 +1,75 @@
+@use '_commons' as c;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profesionales{
+    h1{
+        font-size: 20px;
+        margin-top: 20px;
+        text-transform: capitalize;  
+        color: map-get(c.$colores,"text-sub");
+        text-align: center;
+        text-shadow: 5px 5px 5px rgb(0 0 0 / 30%);
+    }
+
+    h2{
+        font-size: 28px;
+        margin-top:30px;
+        margin-bottom: -80px;
+        text-transform: capitalize;  
+        color: map-get(c.$colores,"subtitulos");
+        text-align: center;
+        text-shadow: 5px 5px 5px rgb(0 0 0 / 30%);
+    }
+   
+}
+
+#odontologos{
+    display: flex;
+    margin-top:120px;
+    padding-bottom: 90px;
+    gap:2rem;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.flotante{
+    box-shadow: map-get(c.$colores,"box-shadow-img");
+    position: relative;
+    animation: floating 2s -2s infinite;/*animación llamada "floating" que dura 2 segundos, comienza 2 segundos antes de que la animación comience y se repite de manera infinita*/
+    
+}
+@keyframes floating {
+    0% {
+      transform: translatex(0);/* el elemento no se desplaza horizontalmente*/
+    }
+    50% {
+      transform: translatex(-10px);/* el elemento se desplaza 10 pixels hacia la izquierda*/
+    }
+    100% {
+      transform: translatex(0); /* elemento vuelve a su posición original*/
+    }
+}
+@media (max-width:768px){
+    .profesionales{
+        h1{
+            font-size:15px;
+            padding-top: 20px;
+        }
+          h2{
+            font-size: 20px;
+        }
+}
+    #odontologos{
+        flex-direction: column;
+        padding-top: 35px;
+    }
+    .flotante{
+        box-shadow: map-get(c.$colores,"box-shadow-img");
+    }
+}
